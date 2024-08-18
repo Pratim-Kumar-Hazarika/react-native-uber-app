@@ -21,10 +21,10 @@ const Onboarding = () => {
       <Swiper
         ref={swiperRef}
         dot={
-          <View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0] rounded-full" />
+          <View className="w-[32px] mt-4 h-[4px] mx-1 bg-[#E2E8F0] rounded-full" />
         }
         activeDot={
-          <View className="w-[32px] h-[4px] mx-1 bg-[#0286FF] rounded-full" />
+          <View className="w-[32px] mt-4 h-[4px] mx-1 bg-[#0286FF] rounded-full" />
         }
         loop={false}
         onIndexChanged={(index) => setCurrentSlide(index)}
@@ -33,10 +33,10 @@ const Onboarding = () => {
           <View key={item.id} className="flex items-center justify-center p-5">
             <Image
               source={item.image}
-              className="w-full h-[300px]"
+              className="w-full h-[280px]"
               resizeMode="contain"
             />
-            <View className="flex flex-row items-center justify-center w-full mt-10">
+            <View className="flex flex-row items-center justify-center w-full mt-7r">
               <Text className="text-black  text-3xl font-bold mx-10 text-center">
                 {item.title}
               </Text>
