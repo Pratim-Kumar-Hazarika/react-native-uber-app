@@ -12,6 +12,7 @@ import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
 import { Link } from "expo-router";
+import OAuth from "@/components/OAuth";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -22,10 +23,14 @@ const SignUp = () => {
   async function onSignUpPress() {}
   return (
     <KeyboardAvoidingView
-      className="flex-1 relative"
+      className="flex-1"
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <ScrollView className="flex-1 border bg-white">
+      <ScrollView
+        automaticallyAdjustContentInsets
+        automaticallyAdjustKeyboardInsets={true}
+        className="flex-1  bg-white"
+      >
         <View className="flex-1 bg-white">
           <View className="relative w-full h-[250px]">
             <Image
@@ -66,6 +71,7 @@ const SignUp = () => {
               onPress={onSignUpPress}
               className="mt-6"
             />
+            <OAuth />
             <Link
               href="/sign-in"
               className="text-lg  text-center text-general-200 mt-10"
