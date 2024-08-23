@@ -22,6 +22,7 @@ const Map = () => {
   const { selectedDriver, setDrivers } = useDriverStore();
   const [markers, setMarkers] = useState<MarkerData[]>([]);
   useEffect(() => {
+    setDrivers(mockDriverData);
     if (Array.isArray(mockDriverData)) {
       if (!userLatitude || !userLongitude) return;
       const newMarkers = generateMarkersFromData({
