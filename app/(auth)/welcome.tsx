@@ -24,7 +24,7 @@ const Onboarding = () => {
           <View className="w-[32px] mt-4 h-[4px] mx-1 bg-[#E2E8F0] rounded-full" />
         }
         activeDot={
-          <View className="w-[32px] mt-4 h-[4px] mx-1 bg-[#0286FF] rounded-full" />
+          <View className="w-[32px] mt-4 h-[4px] mx-1 bg-[#000000] rounded-full" />
         }
         loop={false}
         onIndexChanged={(index) => setCurrentSlide(index)}
