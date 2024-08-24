@@ -4,7 +4,7 @@ import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
 import { ridesMockData } from "@/mock-data/rides";
 import { useLocationStore } from "@/store";
-import { SignedIn, SignedOut, useUser } from "@clerk/clerk-expo";
+import { SignedIn, SignedOut, useAuth, useUser } from "@clerk/clerk-expo";
 import { Link, router } from "expo-router";
 import { useEffect, useState } from "react";
 import {
@@ -22,9 +22,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Page() {
   const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
+  const { signOut } = useAuth();
   const [hasPermission, setHasPermission] = useState(false);
   const loading = true;
-  const handleSignOut = () => {};
+  const handleSignOut = () => {
+    signOut();
+    router.replace("/(auth)/sign-in");
+  };
   const handleDestinationPress = (location: {
     latitude: number;
     longitude: number;
