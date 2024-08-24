@@ -12,7 +12,7 @@ const OAuth = () => {
   const handleGoogleSignIn = React.useCallback(async () => {
     try {
       const result = await googleOAuth(startOAuthFlow);
-      if (result.code === "session_exists") {
+      if (result.code === "success") {
         Alert.alert("Success", "Session exists. Redirecting to home page.");
         router.push("/(root)/(tabs)/home");
       }
