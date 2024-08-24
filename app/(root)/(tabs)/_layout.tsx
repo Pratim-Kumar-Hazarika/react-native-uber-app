@@ -31,13 +31,15 @@ export default function Layout() {
         tabBarInactiveTintColor: "white",
         tabBarShowLabel: true,
         tabBarStyle: {
-          backgroundColor: "#0286FF",
-          borderRadius: 50,
-          paddingBottom: 0, // ios only
+          backgroundColor: "#000000",
+          // borderRadius: 50,
+          paddingBottom: 30, // ios only
+          paddingTop: 10,
+
           overflow: "hidden",
-          marginHorizontal: 20,
-          marginBottom: 20,
-          height: 78,
+          marginHorizontal: 0,
+          // marginBottom: 20,
+          height: 90,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
