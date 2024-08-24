@@ -5,6 +5,7 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -40,7 +41,8 @@ const SignIn = () => {
         console.error(JSON.stringify(signInAttempt, null, 2));
       }
     } catch (err: any) {
-      console.error(JSON.stringify(err, null, 2));
+      const error = JSON.stringify(err, null, 2);
+      Alert.alert("Error", error);
     }
   }, [isLoaded, form.email, form.password]);
   return (
