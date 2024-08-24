@@ -33,7 +33,7 @@ const GoogleTextInput = ({
             width: "100%",
             fontSize: 16,
             borderRadius: 200,
-            fontWeight: 600,
+            fontWeight: "600",
             marginTop: 5,
           },
           listView: {
